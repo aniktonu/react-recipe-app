@@ -1,12 +1,14 @@
 
-import React from 'react'
+import React from 'react';
+import style from './recipe.module.css';
+
 
 
 const Recipe = props => {
 
     return (
         <div>
-            <h1>{props.recipe.label}</h1>
+            <h1 className={style.recipe}>{props.recipe.label}</h1>
             <p>{props.recipe.calories}</p>
             <ol>
                 {props.recipe.ingredients.map(ingredient => (
@@ -19,4 +21,4 @@ const Recipe = props => {
     )
 }
 
-export default Recipe
+export default Recipe;
